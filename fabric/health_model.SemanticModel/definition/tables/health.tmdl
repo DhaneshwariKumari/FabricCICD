@@ -1,0 +1,148 @@
+table health
+	lineageTag: 26966652-a2bc-4caa-8373-5004b1954ee8
+	sourceLineageTag: [dbo].[health]
+
+	column Age
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: e1efb676-3a21-416f-87a5-0ba7f1ac217a
+		sourceLineageTag: AGE
+		summarizeBy: none
+		sourceColumn: AGE
+
+		changedProperty = SummarizeBy
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = User
+
+	column Gender
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 108fe25a-ed4e-4a58-b56a-15a857322ede
+		sourceLineageTag: SEX
+		summarizeBy: none
+		sourceColumn: SEX
+
+		changedProperty = SummarizeBy
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = User
+
+	column BMI
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 4a92e80d-93c9-4146-b28a-1cd52f01f1a5
+		sourceLineageTag: BMI
+		summarizeBy: sum
+		sourceColumn: BMI
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BP
+		dataType: double
+		sourceProviderType: float
+		lineageTag: a192a403-e2c8-4081-b271-d7b8839d749a
+		sourceLineageTag: BP
+		summarizeBy: sum
+		sourceColumn: BP
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column S1
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: af14b001-38e6-44a4-92d9-572bff833949
+		sourceLineageTag: S1
+		summarizeBy: sum
+		sourceColumn: S1
+
+		annotation SummarizationSetBy = Automatic
+
+	column S2
+		dataType: double
+		sourceProviderType: float
+		lineageTag: b4bcdf87-9bfa-4b66-bd37-1959710ed0d9
+		sourceLineageTag: S2
+		summarizeBy: sum
+		sourceColumn: S2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column S3
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 0dd89595-7c03-4747-a226-7d4062e8d992
+		sourceLineageTag: S3
+		summarizeBy: sum
+		sourceColumn: S3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column S4
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 4f2c7dba-580d-4397-b89b-4e7a56ff99b7
+		sourceLineageTag: S4
+		summarizeBy: sum
+		sourceColumn: S4
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column S5
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 43792730-446b-4087-a883-124534b27a18
+		sourceLineageTag: S5
+		summarizeBy: sum
+		sourceColumn: S5
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column S6
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 7c209ade-5caf-450a-a8fd-400e4f036246
+		sourceLineageTag: S6
+		summarizeBy: sum
+		sourceColumn: S6
+
+		annotation SummarizationSetBy = Automatic
+
+	column Y
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 23ce6bbf-e2a3-4727-8dc5-d218e7ce1d9d
+		sourceLineageTag: Y
+		summarizeBy: sum
+		sourceColumn: Y
+
+		annotation SummarizationSetBy = Automatic
+
+	partition health = entity
+		mode: directLake
+		source
+			entityName: health
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

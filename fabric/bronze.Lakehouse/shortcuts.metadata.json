@@ -1,0 +1,14 @@
+[
+  {
+    "name": "sampledata",
+    "path": "/Files",
+    "target": {
+      "type": "AdlsGen2",
+      "adlsGen2": {
+        "connectionId": "55effda7-bd70-4866-aba4-d9adf133d39b",
+        "location": "https://demofabricsa.dfs.core.windows.net",
+        "subpath": "/sampledata"
+      }
+    }
+  }
+]

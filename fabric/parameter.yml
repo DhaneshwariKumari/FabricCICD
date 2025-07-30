@@ -1,0 +1,19 @@
+find_replace:
+#Lakehouse GUID
+- find_value: ae7942cb-e62d-4b45-93fb-55ca8b010262
+  replace_value:
+    dev: "$items.Lakehouse.bronze.id" # DEV Bronze Lakehouse GUID
+    test: "$items.Lakehouse.bronze.id" # TEST Bronze Lakehouse GUID
+    prod: "$items.Lakehouse.bronze.id" # PROD Bronze Lakehouse GUID
+
+- find_value: "02b28815-15ce-4bca-ba1c-437d39241404" # Workspace ID
+  replace_value:
+      dev: "$workspace.id" # DEV workspace ID
+      test: "$workspace.id" # TEST workspace ID
+      prod: "$workspace.id" # PROD workspace ID
+
+- find_value: 380c8405-ce1b-4027-9279-abb255049b0e #Lakehouse SQL Endpoint ID
+  replace_value:
+    dev: 64cf62f0-e980-477f-9ab7-71b6984e1ac8 #Dev Lakehouse SQL Endpoint ID
+    test: c41f0f4c-91d8-4d8c-944a-5536e995f2dc #Test Lakehouse SQL Endpoint ID
+    prod: 380c8405-ce1b-4027-9279-abb255049b0e #Prod Lakehouse SQL Endpoint ID
