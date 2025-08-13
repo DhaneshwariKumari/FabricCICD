@@ -1,2 +1,2 @@
 # FabricCICD
-This repository is for Fabric CICD VBD artefacts.
+This repository is for Fabric CICD artefacts.
